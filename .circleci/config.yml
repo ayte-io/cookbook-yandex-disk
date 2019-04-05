@@ -1,0 +1,34 @@
+version: 2.1
+jobs:
+  validation:
+    machine: true
+    steps:
+      - checkout
+      - run:
+          name: Describe
+          command: |
+            uname -a
+      - run:
+          name: Install VirtualBox
+          command: |
+            sudo apt-get install linux-image-$(uname -r) linux-headers-$(uname -r)
+            sudo apt-get install virtualbox
+      - run:
+          name: Install Vagrant
+          command: |
+            curl -L https://releases.hashicorp.com/vagrant/2.2.4/vagrant_2.2.4_x86_64.deb -o /tmp/vagrant.deb
+            sudo dpkg -i /tmp/vagrant.deb
+      - run:
+          name: Install Chef DK
+          command: |
+            curl -L https://packages.chef.io/files/stable/chefdk/3.8.14/ubuntu/18.04/chefdk_3.8.14-1_amd64.deb -o /tmp/chefdk.deb
+            sudo dpkg -i /tmp/chefdk.deb
+      - run:
+          name: Kitchen Test
+          command: |
+            cd validation
+            kitchen test
+workflows:
+  default:
+    jobs:
+      - validation

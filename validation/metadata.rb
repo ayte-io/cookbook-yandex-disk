@@ -1,0 +1,10 @@
+name 'ayte-yandex-disk-validation'
+maintainer 'Ayte Labs'
+maintainer_email 'ops@ayte.team'
+license 'MIT'
+description 'Installs/Configures ayte-yandex-disk-validation'
+long_description 'Installs/Configures ayte-yandex-disk-validation'
+version '0.1.0'
+chef_version '>= 13.0'
+
+depends 'ayte-yandex-disk'
