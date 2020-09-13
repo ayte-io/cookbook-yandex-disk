@@ -1,4 +1,5 @@
 resource_name :yandex_disk_auth
+provides :yandex_disk_auth
 
 attribute :path, name_attribute: true
 attribute :username, [String, Symbol], required: true, sensitive: true

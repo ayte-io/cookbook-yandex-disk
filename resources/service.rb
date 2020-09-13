@@ -1,4 +1,5 @@
 resource_name :yandex_disk_service
+provides :yandex_disk_service
 
 attribute :name, String, default: 'yandex-disk'
 attribute :executable, String, default: '/usr/bin/yandex-disk'

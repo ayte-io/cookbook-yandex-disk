@@ -1,6 +1,7 @@
 require 'mixlib/shellout'
 
 resource_name :yandex_disk_configuration
+provides :yandex_disk_configuration
 
 attribute :path, [String, Symbol], name_attribute: true, required: true
 attribute :storage_path, [String, Symbol], required: true
