@@ -54,6 +54,9 @@ yandex_disk_service 'yandex-disk' do
 end
 ```
 
+This cookbook is likely to receive no further updates due to yandex 
+public image.
+
 ## Licensing
 
-MIT / Ayte Labs, 2019
+[MIT](LICENSE-MIT) / [UPL-1.0](LICENSE-UPL-1.0)

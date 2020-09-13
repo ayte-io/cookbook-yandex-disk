@@ -2,22 +2,11 @@ name 'ayte-yandex-disk'
 maintainer 'Ayte Labs'
 maintainer_email 'ops@ayte.team'
 license 'MIT'
-description 'Installs/Configures ayte-yandex-disk'
-long_description 'Installs/Configures ayte-yandex-disk'
+description 'Installs/Configures ayte-yandex-disk daemon'
+long_description 'Installs/Configures ayte-yandex-disk daemon'
 version '0.1.0'
 chef_version '>= 13.0'
-
-# The `issues_url` points to the location where issues for this cookbook are
-# tracked.  A `View Issues` link will be displayed on this cookbook's page when
-# uploaded to a Supermarket.
-#
-# issues_url 'https://github.com/<insert_org_here>/ayte-yandex-disk/issues'
-
-# The `source_url` points to the development repository for this cookbook.  A
-# `View Source` link will be displayed on this cookbook's page when uploaded to
-# a Supermarket.
-#
-# source_url 'https://github.com/<insert_org_here>/ayte-yandex-disk'
-
-depends 'apt', '~> 7.1.1'
-depends 'systemd', '~> 3.2.4'
+issues_url 'https://github.com/ayte-io/ayte-yandex-disk/issues'
+source_url 'https://github.com/ayte-io/ayte-yandex-disk'
+depends 'apt', '>= 7.1.1'
+depends 'systemd', '>= 3.2.4'
